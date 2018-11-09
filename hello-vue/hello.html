@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div id="test">
+    <input type="text" v-model="name"><br>
+    <h1>{{name}}</h1><br>
+        <input type="text" v-model="num">
+        <button v-on:click="add">+</button>
+        <button v-on:click="num--">-</button>
+        <br>
+        <h1>{{num}}</h1>
+</div>
+
+<div id="test1">
+
+</div>
+
+
+<script src="./node_modules/vue/dist/vue.js"></script>
+<script type="text/javascript">
+    var vm = new Vue({
+        el: "#test",
+        data: {
+            name: "贝吉塔",
+            num: "1"
+        },
+        methods:{
+            add(){
+                this.num++;
+            }
+        }
+    });
+
+</script>
+</body>
+</html>
